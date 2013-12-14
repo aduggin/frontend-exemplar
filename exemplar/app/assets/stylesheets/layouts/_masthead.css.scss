@@ -1,0 +1,13 @@
+.layout-container {
+  background:#fff;
+  width:90%;
+  max-width:530px;
+  margin:0 auto;
+  padding:20px;
+
+  @media only screen and (min-width : 768px) {
+    & {
+      max-width:700px;
+    }
+  }
+}

@@ -28,5 +28,7 @@ Tools I'll be looking at include:
 
 * sass
 * singularity
+* kss
 * wraith
+* modernizr
 * jasmine

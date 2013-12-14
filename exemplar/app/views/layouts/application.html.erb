@@ -2,13 +2,18 @@
 <html>
 <head>
   <title>Exemplar</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+
+  <!--[if lt IE 9]>
+  <%= stylesheet_link_tag    "application-fixedwidth.css", media: "all" %>
+  <![endif]-->
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
 
+<%= javascript_include_tag "application" %>
 </body>
 </html>

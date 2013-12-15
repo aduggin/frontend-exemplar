@@ -1,0 +1,22 @@
+body {
+  color:$text-default;
+}
+
+a {
+  color:$link-default;
+}
+a:visited {
+  color:$link-default-visited;
+}
+
+h1, h3 {
+  color:$heading-primary-light;
+}
+
+h2 {
+  color:$heading-primary-dark;
+}
+
+p.intro {
+  color:$text-light;
+}

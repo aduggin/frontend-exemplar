@@ -1,1 +1,42 @@
-$background: #ddd;
+/* ==========================================================================
+   Colours
+   ========================================================================== */
+/*
+  @todo discuss with team:
+  http://sachagreif.com/sass-color-variables/
+  https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss
+*/
+
+/* Standard palette, colours */
+$green-light: #72b035;
+$green-mid: #61a612;
+$green-rich: #388426;
+$green-dark: #115329;
+$blue-rich: #1f6faa;
+$blue-dark: #18507a;
+
+/* Standard palette, greys */
+$grey-mid: #6d6d6d;
+$grey-dark: #333333;
+
+/* Semantic colour names */
+$text-default: $grey-dark;
+$text-light: $grey-mid;
+$link-default: $blue-rich;
+$link-default-visited: $blue-dark;
+$heading-primary-dark: $green-dark;
+$heading-primary-light: $green-rich;
+$table-border: $grey-mid;
+
+
+/* ==========================================================================
+   Radius
+   ========================================================================== */
+$border-radius-large: 12px;
+$border-radius-small: 5px;
+
+
+/* ==========================================================================
+   Padding
+   ========================================================================== */
+$box-padding: 20px;

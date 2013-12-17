@@ -3,6 +3,7 @@
 <h2>Style Guide Test Pages</h2>
 <ul>
   <li><a href="/styleguide/tests/barebones">Barebones</a> - basic markup, typographic styles and forms</li>
+  <li><a href="/styleguide/tests/bryanbraun">bryanbraun</a> - styleguide template contains many common HTML elements</li>
   <li><a href="/styleguide/tests/normalize">Normalize</a> - test page for html elements</li>
   <li><a href="/styleguide/tests/mas">MAS article</a></li>
 </ul>
@@ -11,3 +12,81 @@
 <ul>
   <li><a href="/forms">Forms</a></li>
 </ul>
+
+<h2>Page Template - in progress</h2>
+<textarea style="width:90%;height:600px;">
+  <!DOCTYPE html>
+  <html class="js-off" lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>:pageName - Money Advice Service</title>
+    <meta name="description" content=":description" />
+    <meta name="keywords" content=":keywords" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="basic.css">
+    <!--[ if ( gte IE 7 ) & ( lte IE8 ) ]>
+    <link rel="stylesheet" href="enhanced-fixed.css">
+    <![endif]-->
+    <!--[ if ( !IE ) | ( gte IE 9 ) ]><!-->
+    <link rel="stylesheet" href="enhanced-rwd.css" media="only all">
+    <!--<![endif]-->
+
+    <!--
+        javascript that has to run immediately
+            - js-off > js-enabled
+            - google analytics
+     -->
+
+    <!--[if lt IE 9]>
+    <script src="html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header role="banner">
+        <!-- logo -->
+        <nav role="navigation" aria-label="Sections"></nav>
+    </header>
+
+    <nav role="navigation" aria-label="Breadcrumb"></nav>
+    <main role="main">
+
+    </main>
+
+    <footer>
+        <nav role="navigation" aria-label="SomeName"></nav>
+    </footer>
+
+    <!-- javascript that can wait until the page has rendered -->
+  </body>
+  </html>
+</textarea>
+
+<h3>Questions:</h3>
+<h4>Do we want to include classes for internet explorer - or rely on conditional comments and seperate stylesheets?</h4>
+<textarea style="width:90%;height:100px;">
+  <!--[if IE 7 ]> <html lang="en-GB" class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <html lang="en-GB" class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <html lang="en-GB" class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-GB"> <!--<![endif]-->
+</textarea>
+<p>or</p>
+<textarea style="width:90%;height:100px;">
+  <!--[if lt IE 9]><html class="lte-ie8" lang="en-GB"><![endif]-->
+  <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+</textarea>
+
+<h4>Should we use content-type instead of charset?</h4>
+<textarea style="width:90%;height:100px;">
+  <meta name="content-type" content="text/html; charset=UTF-8" />
+</textarea>
+<p>as per Boston Globe</p>
+<textarea style="width:90%;height:100px;">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</textarea>
+<p>as per GOV.UK and BBC</p>
+
+<ul>
+  <li>Should the js class go on the html or the body element?</li>
+  <li>What should we call the js class no-js, js-off > js, js-on, js-enabled</li>
+</ul>
+

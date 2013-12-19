@@ -1,4 +1,8 @@
 Exemplar::Application.routes.draw do
+  mount Kss::Engine => '/kss' if Rails.env.development?
+  namespace :kss do
+    resources :articles, only: :show
+  end
   root 'index#index'
 
   get "styleguide/tests/barebones" => "styleguide#barebones"

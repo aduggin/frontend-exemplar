@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>KSS Styleguide</title>
+    <%= stylesheet_link_tag 'kss' %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'blackboard' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="kss-body">
+    <header class="kss-header">
+      KSS Styleguide Example
+    </header>
+
+    <div id="kss_wrapper">
+      <nav role="main" class="kss-nav">
+        <ul>
+          <li><%= link_to 'Overview', kss.root_path %></li>
+          <li><%= link_to 'Buttons', main_app.kss_article_path('1') %></li>
+          <li><%= link_to 'Forms', main_app.kss_article_path('2') %></li>
+        </ul>
+      </nav>
+
+      <%= yield %>
+    </div><!-- /#wrapper -->
+    
+    <%= javascript_include_tag 'kss' %>
+    <%= javascript_include_tag 'rainbow' %>
+  </body>
+</html>

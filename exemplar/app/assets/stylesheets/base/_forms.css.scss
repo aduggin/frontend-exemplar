@@ -1,0 +1,18 @@
+// For entering in text.
+//
+// .short          - A bit shorter now.
+// .shorter        - A little bit shorter now.
+// .long           - A bit longer now
+//
+// Styleguide 2.1
+input {
+  &.short {
+    width:100px;
+  }
+  &.shorter {
+    width:150px;
+  }
+  &.long {
+    width:200px;
+  }
+}

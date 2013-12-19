@@ -1,0 +1,44 @@
+// A button
+//
+// .primary          - Dims the button to indicate it cannot be used.
+// .primary:hover          - Dims the button to indicate it cannot be used.
+// .secondary          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 1.1
+button {
+  &.primary {
+    background:green;
+  }
+  &.primary:hover {
+    background:blue;
+  }
+  &.primary:active {
+    background:red;
+  }
+  &.primary {
+    background:yellow;
+  }
+}
+
+
+// A button
+//
+// .primary          - Dims the button to indicate it cannot be used.
+// .primary:hover          - Dims the button to indicate it cannot be used.
+// .secondary          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 1.2
+.btn {
+  & .primary {
+    background:green;
+  }
+  & .primary:hover {
+    background:blue;
+  }
+  & .primary:active {
+    background:red;
+  }
+  & .primary {
+    background:yellow;
+  }
+}

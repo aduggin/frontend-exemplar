@@ -1,0 +1,24 @@
+// icons.
+//
+// .icon--foo        - foo
+// .icon--bar        - bar
+// .icon--splat      - splat
+//
+// Styleguide 3.1
+
+
+.icon {
+  display:block;
+  width:50px;
+  height:50px;
+}
+
+.icon--foo {
+  background:red;
+}
+.icon--bar {
+  background:blue;
+}
+.icon--splat {
+  background:green;
+}

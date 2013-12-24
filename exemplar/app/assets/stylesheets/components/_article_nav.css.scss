@@ -1,3 +1,14 @@
-.ArticleNav {
+// Article Nav - hierachical navigation that appears on all article pages
+//
+// Styleguide ArticleNav
 
+.articleNav {
+  border:1px solid #ddd;
+}
+
+.articleNav > h2 {
+  background:#333;
+  color:#fff;
+  margin:0;
+  padding:4px;
 }

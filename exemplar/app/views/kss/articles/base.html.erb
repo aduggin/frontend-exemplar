@@ -1,0 +1,70 @@
+<h1>Base Styles</h1>
+
+<% content_for :sidebar do %>
+<ul>
+    <li><%= link_to 'Buttons', main_app.kss_article_path('1') %></li>
+    <li><%= link_to 'Forms', main_app.kss_article_path('2') %></li>
+</ul>
+<% end %>
+
+
+<!-- 1.0 -->
+<h2>Typography</h2>
+
+<h3>Headings</h3>
+
+<h3>Text</h3>
+
+<h3>Lists</h3>
+<%= styleguide_block '2.1' do -%>
+    <dl class="form">
+      <dt><label>Text Fields</label></dt>
+      <dd><input type="text" class="textfield $modifier_class"></dd>
+    </dl>
+<% end -%>
+
+<!-- 2.0 -->
+<h2>Tables</h2>
+insert
+
+<!-- 3.0 -->
+<h2>Forms</h2>
+<p>This is a hard coded example</p>
+<pre><code data-language="html">
+  <form>
+    <legend>myLegend</legend>
+
+    <p>
+      <label for="myId">myLabel</label>
+      <input id="myId" type="text"/>
+    </p>
+
+    <button>submit</button>
+  </form>
+</code></pre>
+
+<!-- 4.0 -->
+<h2>Mas Article</h2>
+insert
+
+<!-- 5.0 -->
+<h2>Buttons</h2>
+<%= styleguide_block '1.1' do -%>
+    <button class="button $modifier_class">Example Button</button> <a class="button $modifier_class">Example Button</a>
+<% end -%>
+
+<!-- 6.0 -->
+<h2>Icons</h2>
+<%= styleguide_block '3.1' do -%>
+    <span class="icon $modifier_class"></span>
+<% end -%>
+
+<!-- 7.0 -->
+<h2>Colors</h2>
+<div style="background:#4183c4;" class="styleguide-color">$brand-linkBlue</div>
+<div style="background:#999;" class="styleguide-color">$brand-lightGrey</div>
+<div style="background:#666;" class="styleguide-color">$brand-medGrey</div>
+<div style="background:#333;" class="styleguide-color">$brand-darkGrey</div>
+<div style="background:#6CC644;" class="styleguide-color">$brand-green</div>
+<div style="background:#BD2C00;" class="styleguide-color">$brand-red</div>
+<div style="background:#f93;" class="styleguide-color">$brand-orange</div>

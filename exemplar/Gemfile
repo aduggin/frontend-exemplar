@@ -34,16 +34,6 @@ end
 
 group :development do
   gem 'kss-rails'
+  gem 'guard'
+  gem 'guard-sass', :require => false
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]

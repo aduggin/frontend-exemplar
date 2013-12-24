@@ -1,4 +1,4 @@
-class StyleguideController < ApplicationController
+class DemosController < ApplicationController
   def index
   end
   def barebones

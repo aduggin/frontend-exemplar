@@ -1,0 +1,18 @@
+<h1>Components</h1>
+
+<% content_for :sidebar do %>
+    <ul>
+      <li><%= link_to 'ArticleNav', '#articlenav' %></li>
+      <li><%= link_to 'Breadcrumb', '#breadcrumb' %></li>
+    </ul>
+<% end %>
+
+<h2 id="articlenav">Article Nav</h2>
+<%= styleguide_block 'ArticleNav' do -%>
+    <%= render 'index/articlenav' %>
+<% end -%>
+
+<h2 id="breadcrumb">Breadcrumb</h2>
+<%= styleguide_block 'Breadcrumb' do -%>
+    <%= render 'index/breadcrumb', current_page: 'My Page' %>
+<% end -%>

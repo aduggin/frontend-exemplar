@@ -5,10 +5,10 @@ Exemplar::Application.routes.draw do
   end
   root 'index#index'
 
-  get "styleguide/tests/barebones" => "styleguide#barebones"
-  get "styleguide/tests/normalize" => "styleguide#normalize"
-  get "styleguide/tests/bryanbraun" => "styleguide#bryanbraun"
-  get "styleguide/tests/mas" => "styleguide#mas"
+  get "demos/barebones" => "demos#barebones"
+  get "demos/normalize" => "demos#normalize"
+  get "demos/bryanbraun" => "demos#bryanbraun"
+  get "demos/mas" => "demos#mas"
 
   get "forms" => "forms#index"
 

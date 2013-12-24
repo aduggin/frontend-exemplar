@@ -6,20 +6,29 @@
     <%= stylesheet_link_tag 'kss' %>
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag 'blackboard' %>
+    <style>
+        .styleguide-color {
+            margin-bottom: 5px;
+            padding: 30px;
+            color: #fff;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased;
+            border-radius: 3px;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="kss-body">
     <header class="kss-header">
-      KSS Styleguide Example
+        <%= link_to 'Coding Standards', kss.root_path %> |
+        <%= link_to 'Base Styles', main_app.kss_article_path('base') %> |
+        <%= link_to 'Components', main_app.kss_article_path('components') %> |
+        <%= link_to 'Layouts', main_app.kss_article_path('layouts') %>
     </header>
 
     <div id="kss_wrapper">
       <nav role="main" class="kss-nav">
-        <ul>
-          <li><%= link_to 'Overview', kss.root_path %></li>
-          <li><%= link_to 'Buttons', main_app.kss_article_path('1') %></li>
-          <li><%= link_to 'Forms', main_app.kss_article_path('2') %></li>
-        </ul>
+        <%= yield :sidebar %>
       </nav>
 
       <%= yield %>

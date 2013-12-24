@@ -1,14 +1,15 @@
+// Typography
+//
+// Styleguide 1.0
+
 body {
   color:$text-default;
 }
 
-a {
-  color:$link-default;
-}
-a:visited {
-  color:$link-default-visited;
-}
 
+// Headings
+//
+// Styleguide 1.0
 h1, h3 {
   color:$heading-primary-light;
 }
@@ -17,6 +18,16 @@ h2 {
   color:$heading-primary-dark;
 }
 
+
+
 p.intro {
   color:$text-light;
+}
+
+
+a {
+  color:$link-default;
+}
+a:visited {
+  color:$link-default-visited;
 }

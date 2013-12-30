@@ -32,10 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
+group :development, :test do
   gem 'kss-rails'
   gem 'guard'
   gem 'guard-sass', :require => false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload', require: false
+  gem 'rb-inotify', :require => false
+  gem 'ruby_css_lint'
 end
 
-gem 'ruby_css_lint'

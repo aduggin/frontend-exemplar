@@ -1,4 +1,6 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-guard 'sass', :input => 'app/assets/stylesheets', :output => 'public/stylesheets'
+guard 'sass',
+      :input => 'app/assets/stylesheets',
+      :output => 'public/stylesheets'

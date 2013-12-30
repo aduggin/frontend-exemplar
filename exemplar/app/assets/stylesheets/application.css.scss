@@ -1,8 +1,7 @@
 /*
+ *= require normalize-css/normalize
  *= require_self
  */
-
-@import "normalize-css/normalize";
 
 @import 'global/variables';
 @import 'global/functions';

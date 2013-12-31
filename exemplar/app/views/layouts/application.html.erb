@@ -16,11 +16,66 @@
 
 <%= yield %>
 
+<div data-foo="hello">
+    html inspector will through the following warning due to the data attribute on this div:<br />
+    The 'data-foo' prefix is deprecated
+</div>
+
 <%= javascript_include_tag "application" %>
 
-<% if Rails.env != "live" %>
+  <% if Rails.env != "live" %>
+    <!--[if gt IE 9]><!-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.7.0/html-inspector.js"></script>
-    <script> HTMLInspector.inspect() </script>
+    <!-- https://github.com/philipwalton/html-inspector#configuring-html-inspector -->
+    <script>
+
+      // Add a custom rule
+      HTMLInspector.rules.add(
+              "deprecated-data-prefixes",
+              {
+                  deprecated: ["foo", "bar"]
+              },
+              function(listener, reporter, config) {
+
+                  // register a handler for the `attribute` event
+                  listener.on('attribute', function(name, value, element) {
+
+                              var prefix = /data-([a-z]+)/.test(name) && RegExp.$1
+
+                              // return if there's no data prefix
+                              if (!prefix) return
+
+                              // loop through each of the deprecated names from the
+                              // config array and compare them to the prefix.
+                              // Warn if they're the same
+                              config.deprecated.forEach(function(item) {
+                                  if (item === prefix) {
+                                      reporter.warn(
+                                              "deprecated-data-prefixes",
+                                              "The 'data-" + item + "' prefix is deprecated.",
+                                              element
+                                      )
+                                  }
+                              })
+                          }
+                  )
+              })
+
+      // Add pass default config
+      HTMLInspector.inspect({
+          domRoot: "html",
+          useRules: null,
+          excludeRules: null,
+          excludeElements: "svg",
+          excludeSubTrees: ["svg", "iframe"],
+          onComplete: function(errors) {
+              errors.forEach(function(error) {
+                  console.warn(error.message, error.context)
+              })
+          }
+      })
+    </script>
+    <!--<![endif]-->
 <% end %>
 
 </body>

@@ -18,5 +18,10 @@
 
 <%= javascript_include_tag "application" %>
 
+<% if Rails.env != "live" %>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.7.0/html-inspector.js"></script>
+    <script> HTMLInspector.inspect() </script>
+<% end %>
+
 </body>
 </html>
